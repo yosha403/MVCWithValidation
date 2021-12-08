@@ -1,0 +1,37 @@
+﻿
+<h2>Register a Movie</h2>
+
+<form action="Result" method="post">
+    <p>Id</p>
+    <input type="number" name="Id" required />
+
+    <p>Title</p>
+    <input type="text" name="Title" required maxlength="10" />
+
+    <p>Genre</p>
+    <select name="Genre">
+        <option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+    </select>
+    <br />
+    <p>Year</p>
+    <input type="number" name="Year" min="1880"  required/>
+
+    <p>Actors</p>
+    <input type="text" name="Actors" required/>
+
+    <p>Directors</p>
+    <input type="text" name="Directors" required/>
+
+    <!--Phone numbers aren't covered by C# or HTML or JS, best way to do them is Regular Expressions-->
+    <!--Steal your regex from the internet-->
+    @*<p>Phone Number</p>
+        <input placeholder="555-555-5555" type="text" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"/>*@
+
+    <p>Email</p>
+    <input pattern="" />
+    <input type="submit" />
+</form>
+ 

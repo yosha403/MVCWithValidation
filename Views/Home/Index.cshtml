@@ -1,0 +1,8 @@
+﻿<h2>Way of doing validation in .Net MVc</h2>
+<ol>
+    <li>HTML5 Form validation-good for handling user input, used on views</li>
+    <li>Data annotations-good for both forms and database validation, many SQL rules you apply have their own data annotation, used on models</li>
+    <li>Controller Side Validation - where you can use any kind of C# code, useful for cases that HTML and Data Annotation can't cover or for something specific</li>
+    <li>Javascript on Views - if you want C# controller style validation but on your front-end, Javascript and C# struggle to talk to each other since they run at oppposite times, BUT outside of .Net on static web sites JS will be useful, JS is loosely typed, meaning any variable can be any data type at any time</li>
+    <li>RegEx - this stands for regular expressions and can be used on both forms and in the controller. Good for any common pattern(IE phone number) that isn't covered by other methods.Easy to use on forms. My advice on RegEx: don't try and write your own, instead google the regex and steal from someone with 6 Phds.</li>
+</ol>

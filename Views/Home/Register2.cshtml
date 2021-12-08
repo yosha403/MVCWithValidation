@@ -1,0 +1,43 @@
+﻿@model Movie
+
+<p>To setup data annotations on a form you need 2 things: </p>
+<ul>
+    <li>To import the deired model at the top of the page</li>
+    <li>You need to import the built in javacript validation file, which comes with .net</li>
+</ul>
+
+<p>Once those imports we need to create our forms, based upon our model. So we can use asp-for to reference each property</p>
+
+<p asp-validation-summary="ModelOnly" class="text-danger"></p>
+
+<form action="Register2" method="post">
+    <label asp-for="Id" class="control-label"></label>
+    <input asp-for="Id" class="form-control" />
+    <span asp-validation-for="Id" class="text-danger"></span>
+
+    <label asp-for="Title" class="control-label"></label>
+    <input asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+
+    <label asp-for="Year" class="control-label"></label>
+    <input asp-for="Year" class="form-control" />
+    <span asp-validation-for="Year" class="text-danger"></span>
+
+    <!-- You still have access to  all of your HTML elements with data annotations-->
+    <label asp-for="Genre" class="control-label"></label>
+    <select asp-for="Genre">
+        <option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+    </select>
+    <span asp-validation-for="Genre" class="text-danger"></span>
+
+    <input type="submit" />
+</form>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
